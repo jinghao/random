@@ -88,7 +88,11 @@ void print_possibilities(char board[][BOARD_SIZE]) {
 }
 
 void print_board(char board[][BOARD_SIZE]) {
+
   for (int i = 0; i < 9; i++) {
+    if (i % 3 == 0)
+      printf("\n -----------------------");
+    printf("\n| ");
     for (int j = 0; j < 9; j++) {
       if (board[i][j]){
         printf("%d ", board[i][j]);
@@ -100,10 +104,8 @@ void print_board(char board[][BOARD_SIZE]) {
         printf("| ");
       }
     }
-    if (i % 3 == 2)
-      printf("\n-----------------------");
-    printf("\n");
   }
+  printf("\n -----------------------\n");
 }
 
 void solve(char board[][BOARD_SIZE]) {
@@ -146,5 +148,5 @@ int main(void) {
   printf("Done solving. Solution:\n");
   print_board(board);
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
