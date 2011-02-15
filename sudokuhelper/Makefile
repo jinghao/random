@@ -1,4 +1,4 @@
-CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+CXXFLAGS =	-O3 -g -Wall -fmessage-length=0
 
 OBJS =		sudokuhelper.o
 
